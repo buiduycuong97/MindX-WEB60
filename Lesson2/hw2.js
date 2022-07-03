@@ -1,5 +1,5 @@
 //Su dung promise
-// const getInfomation = async () => {
+// const getInfomation =  () => {
 //   const userName = document.querySelector("#userName").value;
 
 //   fetch(`https://api.github.com/users/${userName}`)

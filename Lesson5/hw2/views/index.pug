@@ -1,0 +1,47 @@
+html
+head
+    title #{abc}
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", rel="stylesheet")
+body
+    div.container
+        .card(style = "margin-top: 5%;")
+            h3.card-header Registration Form
+            .card-body
+                form(action="/user-info", method="post", enctype="application/x-www-form-urlencoded")
+                    .row.m-4
+                        .col
+                            label(for="fname") First Name
+                            input.form-control(type="text", name="fname", placeholder="Nguyễn Văn A", )
+                        .col
+                            label(for="lname") Last Name
+                            input.form-control(type="text",min="0", name="lname", placeholder="19", )
+                    .row.m-4
+                        .col
+                            label(for="birthday") Birthday
+                            input.form-control(type="date",name="birthday",id="birthday")
+                        .col    
+                            label(style="display:block") Gender
+                            .row.pt-1
+                                .col
+                                    label(for="male") Male
+                                    input(style="width:20px" type="radio" name="gender" value="Male" required)
+                                .col
+                                    label(for="female") Female
+                                    input(style="width:20px" type="radio" name="gender" value="Female" required)
+                    .row.m-4
+                        .col
+                            label(for="email") Email
+                            input.form-control(type="email" name="email" required )
+                        .col
+                            label(for="phone") Phone Number
+                            input.form-control(type="text" name="phone" min="0" required)
+                    .row.m-4
+                            label(for="subject") Subject
+                            select.form-control
+                                option(value="") Choose option
+                                option(value="Option 1") Option 1
+                                option(value="Option 2") Option 2
+
+                    button.btn.btn-block.btn-info(type="submit") Submit
+                    
